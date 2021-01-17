@@ -44,7 +44,7 @@ function createAutoComplete({
     dropdown.classList.add("is-active");
   }
 
-  input.addEventListener("input", debounce(onInput));
+  input.addEventListener("input", debounce(onInput, 500));
   input.addEventListener("click", () => {
     if (resultsWrapper.innerHTML !== "") {
       dropdown.classList.add("is-active");
