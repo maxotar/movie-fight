@@ -1,4 +1,4 @@
-const apiURL = "http://www.omdbapi.com/";
+const apiURL = "https://www.omdbapi.com/";
 const apiKey = "aef8c2ee";
 
 let movieLeft;
