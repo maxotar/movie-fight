@@ -46,7 +46,15 @@ function compare() {
     leftStat.classList.remove("is-primary", "is-warning");
     rightStat.classList.remove("is-primary", "is-warning");
 
-    if (isNaN(leftSideValue) || rightSideValue >= leftSideValue) {
+    console.log(leftSideValue, rightSideValue);
+    if (
+      (isNaN(leftSideValue) && isNaN(rightSideValue)) ||
+      leftSideValue === rightSideValue
+    ) {
+      return;
+    }
+
+    if (isNaN(leftSideValue) || rightSideValue > leftSideValue) {
       rightStat.classList.add("is-primary");
       leftStat.classList.add("is-warning");
     } else if (isNaN(rightSideValue) || rightSideValue < leftSideValue) {
